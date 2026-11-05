@@ -1,0 +1,105 @@
+<html style="margin:0;padding:0;">
+<title>量化全流程学习路径（面向求职 · 项目驱动）</title>
+<div style="width:100%;box-sizing:border-box;background:#f8fafc;padding:28px 18px;font-family:-apple-system,'Segoe UI','Microsoft YaHei',sans-serif;color:#0f172a;">
+  <div style="max-width:1080px;margin:0 auto;">
+
+    <div style="font-size:22px;font-weight:700;margin-bottom:6px;">量化全流程学习路径</div>
+    <div style="font-size:14px;color:#475569;margin-bottom:20px;line-height:1.6;">
+      主线：多因子选股量化研究员 ｜ 方法：每个阶段做一个可交付项目，沉淀 GitHub 作品集 ｜ 你已完成阶段 0 的数据工程。
+    </div>
+
+    <!-- 阶段卡片，纵向阅读 -->
+
+    <!-- 阶段0 -->
+    <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #64748b;border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+      <div style="flex:0 0 150px;padding:14px 16px;background:#f1f5f9;">
+        <div style="font-size:14px;font-weight:700;color:#64748b;">阶段 0 · 已完成</div>
+        <div style="font-size:12px;color:#64748b;margin-top:4px;">工具与数据地基</div>
+      </div>
+      <div style="flex:1 1 280px;padding:14px 16px;font-size:12.5px;line-height:1.7;">
+        <b>学：</b>Python(pandas/numpy)、SQL、Git、Linux 命令行；股票/期货/期权交易规则、复权、财报口径<br>
+        <b>项目：</b>Wind→Qlib 全 A 分钟数据工程（已完成：拉取/清洗/对齐/增量）
+      </div>
+    </div>
+
+    <!-- 阶段1 -->
+    <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #2563eb;border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+      <div style="flex:0 0 150px;padding:14px 16px;background:#eff6ff;">
+        <div style="font-size:14px;font-weight:700;color:#2563eb;">阶段 1 · 最核心</div>
+        <div style="font-size:12px;color:#64748b;margin-top:4px;">单因子研究全流程（约 3-4 周）</div>
+      </div>
+      <div style="flex:1 1 280px;padding:14px 16px;font-size:12.5px;line-height:1.7;">
+        <b>学：</b>因子分类（量价/基本面/另类）；预处理（去极值、标准化、缺失）；IC/IR、分层回测、换手率、因子衰减；行业/市值中性化<br>
+        <b>项目：</b>手工实现 30-50 个经典因子（动量、反转、波动率、流动性、换手率、市值、估值），产出完整因子分析报告（alphalens / jqfactor_analyzer）<br>
+        <b>验收：</b>能讲清一个因子为何有效、IC 多少、怎么中性化、何时失效
+      </div>
+    </div>
+
+    <!-- 阶段2 -->
+    <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #0d9488;border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+      <div style="flex:0 0 150px;padding:14px 16px;background:#f0fdfa;">
+        <div style="font-size:14px;font-weight:700;color:#0d9488;">阶段 2</div>
+        <div style="font-size:12px;color:#64748b;margin-top:4px;">多因子合成与选股模型（约 3 周）</div>
+      </div>
+      <div style="flex:1 1 280px;padding:14px 16px;font-size:12.5px;line-height:1.7;">
+        <b>学：</b>因子合成（等权/IC 加权/最大化 ICIR）；多因子模型；机器学习选股（LightGBM）；滚动交叉验证、防过拟合、特征重要性<br>
+        <b>项目：</b>Qlib 跑 Alpha158 + LightGBM，对比线性合成 vs 机器学习，做样本外滚动预测<br>
+        <b>验收：</b>能讲清过拟合来源、为何滚动验证、ML 相比线性的优劣
+      </div>
+    </div>
+
+    <!-- 阶段3 -->
+    <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #16a34a;border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+      <div style="flex:0 0 150px;padding:14px 16px;background:#f0fdf4;">
+        <div style="font-size:14px;font-weight:700;color:#16a34a;">阶段 3</div>
+        <div style="font-size:12px;color:#64748b;margin-top:4px;">组合构建 · 风险模型 · 回测归因（约 3-4 周）</div>
+      </div>
+      <div style="flex:1 1 280px;padding:14px 16px;font-size:12.5px;line-height:1.7;">
+        <b>学：</b>组合优化（均值方差、风险平价、行业/风格/换手约束）；Barra 风险模型；交易成本与滑点；增强指数；绩效归因（Brinson、因子归因）<br>
+        <b>项目：</b>端到端选股策略：预测信号 → 目标持仓（带约束）→ 完整回测 → 归因报告<br>
+        <b>验收：</b>能解释收益来源、风险暴露、策略容量
+      </div>
+    </div>
+
+    <!-- 阶段4 -->
+    <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #db2777;border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+      <div style="flex:0 0 150px;padding:14px 16px;background:#fdf2f8;">
+        <div style="font-size:14px;font-weight:700;color:#db2777;">阶段 4 · 差异化</div>
+        <div style="font-size:12px;color:#64748b;margin-top:4px;">因子挖掘进阶（约 4 周）</div>
+      </div>
+      <div style="flex:1 1 280px;padding:14px 16px;font-size:12.5px;line-height:1.7;">
+        <b>学：</b>遗传规划/符号回归；强化学习挖因子（AlphaGen）；深度学习因子（LSTM/Transformer/GAT）；另类数据；LLM 挖因子（RD-Agent）<br>
+        <b>项目：</b>复现 AlphaGen 或 Alpha101，自动挖一批因子并评估，复现一篇论文<br>
+        <b>验收：</b>理解前沿方法边界，能独立复现论文
+      </div>
+    </div>
+
+    <!-- 阶段5 -->
+    <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #ea580c;border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+      <div style="flex:0 0 150px;padding:14px 16px;background:#fff7ed;">
+        <div style="font-size:14px;font-weight:700;color:#ea580c;">阶段 5 · 可选</div>
+        <div style="font-size:12px;color:#64748b;margin-top:4px;">实盘工程化 / 高频拓展</div>
+      </div>
+      <div style="flex:1 1 280px;padding:14px 16px;font-size:12.5px;line-height:1.7;">
+        <b>实盘方向：</b>QMT/vnpy 对接，模拟盘/小资金实盘，记录实盘 vs 回测，理解冲击成本与实盘坑<br>
+        <b>高频方向：</b>补 C++、Level2 逐笔与微观结构、日内因子（门槛不同，按求职目标决定）
+      </div>
+    </div>
+
+    <!-- 求职准备 -->
+    <div style="background:#0f172a;border-radius:10px;padding:18px 20px;margin-top:16px;color:#e2e8f0;">
+      <div style="font-size:15px;font-weight:700;margin-bottom:10px;color:#fff;">求职准备（贯穿全程）</div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;line-height:1.7;">
+        <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">作品集（3-4 个）：</b>数据工程、单因子研究、多因子选股模型、自动因子挖掘；放 GitHub，README 写清数据与结论</div>
+        <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">面试考点：</b>概率统计与 brain teaser、因子理解、回测细节、代码题（Python/算法）、金融常识、市场感觉</div>
+        <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">关键动作：</b>争取一段量化实习（上海机会多）；简历用真实数据与可量化结果；多复盘、记录每次失效</div>
+      </div>
+    </div>
+
+    <div style="font-size:11.5px;color:#94a3b8;margin-top:14px;line-height:1.6;">
+      建议：少看教程、多做完整项目；每个阶段都要能「讲给别人听」。岗位方向可在做完阶段 1-3 后再细化。
+    </div>
+
+  </div>
+</div>
+</html>

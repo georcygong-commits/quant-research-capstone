@@ -1,0 +1,118 @@
+<html style="margin:0;padding:0;">
+<title>量化全流程完整知识体系（细致版）</title>
+<div style="width:100%;box-sizing:border-box;background:#f8fafc;padding:26px 16px;font-family:-apple-system,'Segoe UI','Microsoft YaHei',sans-serif;color:#0f172a;">
+<div style="max-width:1120px;margin:0 auto;">
+
+  <div style="font-size:22px;font-weight:700;margin-bottom:6px;">量化全流程完整知识体系</div>
+  <div style="font-size:13.5px;color:#475569;margin-bottom:8px;line-height:1.65;">
+    主线：多因子选股量化研究员，兼顾 CTA / 高频 / 衍生品 / 量化开发。<b>8 大模块、约 40 个小节、200+ 知识点</b>。
+    每个模块都有「掌握标准 / 产出」。<span style="color:#dc2626;">红色＝核心必学</span>，<span style="color:#64748b;">灰色＝可选/进阶</span>。
+  </div>
+  <div style="font-size:12.5px;color:#64748b;margin-bottom:20px;line-height:1.6;">
+    学习顺序建议：模块 1-2 打底 → 模块 3 因子（核心）→ 模块 4 模型 → 模块 5-6 组合与回测 → 模块 7 实盘 → 模块 8 求职贯穿全程。
+  </div>
+
+  <!-- 模块1 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#64748b;color:#fff;font-weight:700;font-size:15px;">模块 1 · 金融市场与工具基础</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">1.1 市场结构</b><br>· 交易所（沪深北）、一/二级市场、场内场外<br>· 交易品种：股票/债券/基金/期货/期权/ETF/可转债<br>· 指数体系（沪深300/中证500/1000/全指）、行业分类（申万/中信/中证）</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">1.2 交易规则</b><br>· 交易时间、集合竞价 vs 连续竞价、价格优先时间优先<br>· 涨跌幅限制、T+1、停牌、ST、涨跌停、临停<br>· 委托/成交/清算交收、融资融券、转融通</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">1.3 数据与口径</b><br>· 数据类型：行情/基本面/资金流/另类；日/分钟/Level2<br>· 复权（前/后/不复权）、复权因子、单位、币种<br>· 数据质量：缺失/异常/对齐/停牌/幸存者偏差/前视偏差(PIT)</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">1.4 编程工具</b><br>· Python：pandas/numpy/scipy/matplotlib<br>· SQL：查询/聚合/连接；Git、Linux、正则、并行<br>· 存储：CSV/MySQL/ClickHouse/Arctic/Qlib bin</div>
+    </div>
+    <div style="padding:8px 16px;background:#f8fafc;font-size:12px;color:#475569;border-top:1px solid #e2e8f0;">掌握标准：能独立拉取、清洗、对齐任意数据，讲清复权与交易规则。</div>
+  </div>
+
+  <!-- 模块2 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#4f46e5;color:#fff;font-weight:700;font-size:15px;">模块 2 · 数学与统计基础</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">2.1 概率统计</b><br>· 概率/条件概率/贝叶斯、随机变量、常见分布<br>· 期望/方差/协方差/相关；大数定律、中心极限定理<br>· 假设检验：t检验、p值、置信区间、多重检验</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">2.2 回归与统计</b><br>· 线性回归 OLS、加权/稳健回归、GLM、残差分析<br>· 时间序列：平稳性/ADF/自相关/ARMA/GARCH/协整<br>· 多元统计：PCA、因子分析、聚类</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">2.3 最优化</b><br>· 凸优化、拉格朗日、KKT、梯度下降<br>· 线性规划/二次规划、约束优化（cvxpy）<br>· 数值方法、矩阵运算</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">2.4 金融数学</b><br>· 简单/对数收益、年化、波动率<br>· CAPM、APT、有效市场假说、Fama-French<br>· 衍生品定价：期货、BS 公式、希腊字母</div>
+    </div>
+    <div style="padding:8px 16px;background:#f8fafc;font-size:12px;color:#475569;border-top:1px solid #e2e8f0;">掌握标准：能手推回归/检验/优化，看懂并复现公式，应对概率面试题。</div>
+  </div>
+
+  <!-- 模块3 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#2563eb;color:#fff;font-weight:700;font-size:15px;">模块 3 · 因子研究（核心中的核心）</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">3.1 因子理论</b><br>· 因子定义、分类、收益来源（风险补偿/行为偏差/微观结构）<br>· 因子有效性逻辑、因子拥挤、因子衰减<br>· 风格因子 vs Alpha 因子</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">3.2 因子构建</b><br>· 量价：动量/反转/波动率/换手率/流动性/量价相关<br>· 基本面：估值(PE/PB/PS)/盈利/成长/质量/杠杆<br>· 技术/统计/高频/另类；Alpha101/191、Barra 风格</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">3.3 预处理与合成</b><br>· 缺失值、去极值(MAD/3σ/分位)、标准化(Z-score/rank)<br>· 中性化：行业/市值/风格中性<br>· 合成：等权/IC加权/PCA/最大化ICIR</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">3.4 因子评估</b><br>· IC/RankIC/IR、IC胜率、IC衰减<br>· 分层回测、多空收益、单调性、换手率<br>· 因子相关性、容量；alphalens/jqfactor 报告</div>
+      <div style="flex:1 1 320px;"><b style="color:#dc2626;">3.5 因子挖掘（进阶）</b><br>· 遗传规划/符号回归（gplearn）<br>· 强化学习（AlphaGen）、深度学习因子（LSTM/Transformer/GAT）<br>· LLM 因子（RD-Agent）、另类数据、因子库管理、防过拟合</div>
+    </div>
+    <div style="padding:8px 16px;background:#eff6ff;font-size:12px;color:#1e40af;border-top:1px solid #bfdbfe;">掌握标准：能独立实现/评估/中性化一个因子，讲清为何有效、何时失效；产出因子研究报告。</div>
+  </div>
+
+  <!-- 模块4 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#0d9488;color:#fff;font-weight:700;font-size:15px;">模块 4 · 模型与预测</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">4.1 传统模型</b><br>· 线性/逻辑回归、打分模型、多因子选股<br>· 截面回归 vs 时序模型</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">4.2 机器学习</b><br>· 决策树/随机森林/XGBoost/LightGBM/CatBoost<br>· 标签构建、特征工程、交叉验证、超参调优<br>· 特征重要性、SHAP、模型评估</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">4.3 深度学习</b><br>· 神经网络、CNN、RNN/LSTM/GRU<br>· Transformer/Attention、图神经网络、强化学习<br>· PyTorch、训练技巧、GPU</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">4.4 模型工程</b><br>· 训练/验证/测试、滚动验证、防泄漏<br>· 过拟合、正则化、集成、预测目标（收益/排序/分类）</div>
+    </div>
+    <div style="padding:8px 16px;background:#f0fdfa;font-size:12px;color:#115e59;border-top:1px solid #99f6e4;">掌握标准：能从信号到预测，做样本外滚动，讲清过拟合与模型选择。</div>
+  </div>
+
+  <!-- 模块5 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#16a34a;color:#fff;font-weight:700;font-size:15px;">模块 5 · 组合构建与风险模型</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">5.1 组合理论</b><br>· 均值方差、有效前沿、马科维茨<br>· 风险平价、Black-Litterman、Kelly</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">5.2 组合优化</b><br>· 约束：行业/风格/权重/换手/跟踪误差<br>· cvxpy 求解、指数增强、TopK、风险预算</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">5.3 风险模型</b><br>· 风险分解、Barra 多因子风险模型<br>· 波动率/VaR/CVaR/最大回撤/下行风险<br>· 系统性 vs 特质风险、风险暴露</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">5.4 交易成本</b><br>· 佣金/印花税/滑点/冲击成本/买卖价差<br>· 策略容量、流动性约束</div>
+    </div>
+    <div style="padding:8px 16px;background:#f0fdf4;font-size:12px;color:#166534;border-top:1px solid #bbf7d0;">掌握标准：能从预测信号到目标持仓（带约束），量化风险与成本。</div>
+  </div>
+
+  <!-- 模块6 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#ca8a04;color:#fff;font-weight:700;font-size:15px;">模块 6 · 回测与业绩归因</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">6.1 回测框架</b><br>· 事件驱动 vs 向量化；撮合/订单/滑点/成交<br>· 回测陷阱：前视偏差/未来函数/过拟合/幸存者偏差</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">6.2 绩效指标</b><br>· 收益：年化/累计/超额；风险：波动率/夏普/索提诺/卡玛/回撤<br>· 胜率/盈亏比/信息比率/换手率</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">6.3 业绩归因</b><br>· Brinson 归因、多因子归因、风格归因<br>· 行业/个股贡献、择时 vs 选股</div>
+      <div style="flex:1 1 240px;"><b style="color:#64748b;">6.4 策略类型（了解）</b><br>· 选股/择时/CTA/套利/做市/高频<br>· 指数增强/市场中性/配对交易/事件驱动</div>
+    </div>
+    <div style="padding:8px 16px;background:#fefce8;font-size:12px;color:#854d0e;border-top:1px solid #fde68a;">掌握标准：能独立搭可信回测、算全套指标、做归因并识别回测陷阱。</div>
+  </div>
+
+  <!-- 模块7 -->
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06);">
+    <div style="padding:11px 16px;background:#ea580c;color:#fff;font-weight:700;font-size:15px;">模块 7 · 实盘与工程化</div>
+    <div style="padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;line-height:1.75;">
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">7.1 交易系统</b><br>· 实盘流程、交易接口（QMT/vnpy/CTP）<br>· 订单管理、实时风控、监控、日志、告警</div>
+      <div style="flex:1 1 240px;"><b style="color:#dc2626;">7.2 工程化</b><br>· 数据管道、调度、自动化、回测平台<br>· 实盘 vs 回测差异、滑点、延迟</div>
+      <div style="flex:1 1 240px;"><b style="color:#64748b;">7.3 高频/微观结构（可选）</b><br>· Level2/逐笔/订单簿/微观结构、日内因子<br>· 做市、低延迟、C++、Linux</div>
+      <div style="flex:1 1 240px;"><b style="color:#64748b;">7.4 其他方向（可选）</b><br>· CTA（趋势/截面）、期权（波动率/希腊字母/套利）<br>· 可转债、ETF 套利、事件驱动、做市</div>
+    </div>
+    <div style="padding:8px 16px;background:#fff7ed;font-size:12px;color:#9a3412;border-top:1px solid #fed7aa;">掌握标准：理解实盘落地与成本；高频/其他方向按求职目标决定深度。</div>
+  </div>
+
+  <!-- 模块8 -->
+  <div style="background:#0f172a;border-radius:10px;padding:16px 18px;margin-bottom:14px;color:#e2e8f0;">
+    <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:10px;">模块 8 · 求职与职业（贯穿全程）</div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;line-height:1.7;">
+      <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">岗位认知：</b>量化研究/量化开发/高频/CTA/衍生品/做市；买方私募 vs 卖方、公募 vs 私募</div>
+      <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">作品集：</b>3-4 个高质量 GitHub 项目（数据工程/因子研究/多因子模型/自动挖掘），README 写清数据与结论</div>
+      <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">面试：</b>概率题/brain teaser、代码题(算法/SQL)、因子与回测细节、市场感觉、金融常识</div>
+      <div style="flex:1 1 220px;"><b style="color:#7dd3fc;">关键动作：</b>争取量化实习、简历量化结果、多复盘、建立个人研究笔记</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+    说明：每个模块将对应 1 个或多个「细致 notebook」，包含：知识点讲解（含公式推导）→ 可运行代码 → 真实输出 → 图表 → 练习/自测 → 面试要点。
+    确认本体系后，我将从模块 3（因子研究）开始逐个深入制作。
+  </div>
+
+</div>
+</div>
+</html>
